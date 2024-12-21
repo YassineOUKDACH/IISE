@@ -64,13 +64,14 @@ print(P1.nom, P1.prenom, P1.age)  # Appelle les getters
 
 P1.age = 30  # Appelle le setter
 print(P1.age)
-
+print("----------------------------Accès à l'attribut _protected---------------------------")
 class Personne:
     def __init__(self, nom):
         self._nom = nom  
 p = Personne("Amine")
 print(p._nom)  # Possible, mais pas recommandé
 
+print("----------------------------Accès à l'attribut _pivate (Name mangling)---------------------------")
 class Personne:
     def __init__(self, nom):
         self.__nom = nom
